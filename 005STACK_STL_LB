@@ -1,0 +1,19 @@
+#include<iostream>
+#include<stack>
+// ALL ABOUT STACK STL (LIFO)-> LAST IN FIRST OUT
+using namespace std;
+int main()
+{
+    stack<string>s;
+    s.push("Vishal");
+    s.push("Rai");
+    s.push("Google");
+
+    cout<<"Top Element is "<<s.top()<<endl; // Google
+    s.pop();
+    cout<<"Top Element is "<<s.top()<<endl;  // Rai
+
+    cout<<"Size of Stack is "<<s.size()<<endl; // 2
+    cout<<"Empty or not "<<s.empty()<<endl; // 0
+    return 0;
+}
