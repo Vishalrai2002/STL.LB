@@ -1,0 +1,35 @@
+#include<iostream>
+#include<list>
+using namespace std;
+// ALL ABOUT LIST STL
+// THIS IS DIFFER FORM OUR PREVIOUS STL FUNCTION
+int main()
+{
+    list<int>l;
+
+//If we want to copy above list into below list do below code
+//n(size,intialization);
+    list<int>n(5,100);
+    for (int i:n)
+    {
+        cout<<i<<" "; // 100 100 100 100 100
+    }
+    cout<<endl;
+
+    l.push_back(1);
+    l.push_front(2);
+    for (int i:l)
+    {
+        cout<<i<<" "; // 2 1
+    }
+    cout<<endl;
+    l.erase(l.begin());
+    cout<<"after erase "<<endl;
+    for (int i:l)
+    {
+        cout<<i<<" "; // 1
+    }
+    cout<<endl;
+    cout<<"Size of list "<<l.size()<<endl;
+    return 0;
+}
