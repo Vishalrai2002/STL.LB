@@ -25,10 +25,10 @@ int main()
     cout<<"back "<<d.back()<<endl; // 1
 
     cout<<"Empty "<<d.empty()<<endl; // 0
-    cout<<"Before Erase "<<d.size()<<endl;
+    cout<<"Before Erase "<<d.size()<<endl; // 2
 
     d.erase(d.begin(),d.begin()+1);
-    cout<<"after erase "<<d.size()<<endl;
+    cout<<"after erase "<<d.size()<<endl; // 1
     for (int i:d)
     {
         cout<<i<<" "; // 1
