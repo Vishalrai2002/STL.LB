@@ -1,0 +1,19 @@
+#include<iostream>
+#include<queue>
+// ALL ABOUT QUEUE STL (FIFO)-> FIRST IN FIRST OUT
+using namespace std;
+int main()
+{
+    queue<string>q;
+    q.push("Vishal");
+    q.push("Rai");
+    q.push("Google");
+    cout<<"size before pop "<<q.size()<<endl; // 3
+    cout<<"First Element is "<<q.front()<<endl; // Vishal
+
+    q.pop();
+    cout<<"Now First Element is "<<q.front()<<endl; // Rai
+    cout<<"size after pop "<<q.size()<<endl; // 2
+
+    return 0;
+}
