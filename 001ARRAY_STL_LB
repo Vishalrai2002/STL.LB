@@ -1,0 +1,37 @@
+#include<iostream>
+#include<array>
+// ABOUT ARRAY STL
+using namespace std;
+int main()
+{
+    // USUALLY WE DO THIS METHOD TO INPLEMENT ARRAY
+    int arr[]={1,2,3,4,5};
+    int n=sizeof(arr)/sizeof (int);
+    for (int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+
+    // USING STL METHOD TO IMPLEMENT ARRAY
+
+    array<int,5>a={1,2,3,4,5};
+    int size=a.size();
+    for (int i=0;i<size;i++)
+    {
+
+        cout<<a[i]<<" ";
+    }
+    cout<<endl;
+
+// BELOW CODE TIME COMPLEXITY IS O(1)
+    cout<<"Element at 2nd  index is "<<a.at(2)<<endl;
+    cout<<"Empty or Not "<<a.empty()<<endl; // Return boolean value
+
+    cout<<"First Element -> "<<a.front()<<endl; // Return first element of an array
+    cout<<"Last Element -> "<<a.back()<<endl; // Return last element of an array
+
+
+
+    return 0;
+}
