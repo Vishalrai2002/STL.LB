@@ -1,0 +1,49 @@
+#include<iostream>
+#include<algorithm>
+#include<vector>
+// ALL ABOUT STL ALGORITHMS
+using namespace std;
+int main()
+{
+    vector<int>v;
+    v.push_back(1);
+    v.push_back(3);
+    v.push_back(6);
+    v.push_back(7);
+// doing binarysearch using algorithm firstly is this values are in sorted order to do search
+
+    cout<<"finding 5 -> "<<binary_search(v.begin(),v.end(),6)<<endl;// 1- return bool 
+    cout<<"lower bound "<<lower_bound(v.begin(),v.end(),6)-v.begin()<<endl; // 3 
+    cout<<"upper bound "<<upper_bound(v.begin(),v.end(),6)-v.begin()<<endl; // 4 
+    int a=3;
+    int b=5;
+    cout<<"max "<<max(a,b)<<endl; // 5
+    cout<<"min "<<min(a,b)<<endl; // 3
+
+   swap(a,b);
+   cout<<"a "<<a<<" "<<"b "<<b<<endl; // a=5 b=3
+
+   string s="abcd";
+   reverse(s.begin(),s.end());
+   cout<<"Reversed string -> "<<s<<endl; // dcba
+
+   rotate(v.begin(),v.begin()+1,v.end());
+   cout<<"after rotate -> ";
+   for (int i:v)
+   {
+       cout<<i<<" "; // 3 6 7 1
+   }
+   cout<<endl;
+
+   cout<<"after sort -> ";
+// This sort is based on "Intro sort"-> which is combination of quick sort,heap sort,insertion sort  
+   sort(v.begin(),v.end());
+   for (int i:v)
+   {
+       cout<<i<<" ";
+   }
+   cout<<endl;
+
+
+    return 0;
+}
